@@ -1,0 +1,98 @@
+.signup-page {
+    margin-top: 250px;
+    min-height: 100%;;       
+}
+
+.signup-page-title {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;    
+    font-size: 16px;
+}
+
+.signup-page-div {  
+    display: flex;
+    flex-wrap: wrap; 
+    padding-top: 10px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-page-form {
+    width: 50%;        
+}
+
+label {
+    font-weight: bold;    
+    font-size: 24px; 
+    width: 25%;
+    margin: 8px 0;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;        
+}
+
+input, select {
+    font-weight: bold;    
+    font-size: 24px; 
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #00458B;
+    border-radius: 4px;  
+}
+
+input[type="checkbox"] {
+    width: 10%;
+    transform: scale(2);    
+}
+
+input[type="submit"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    width: 30%;
+    font-size: 30px;
+    font-weight: bold;    
+    cursor: pointer;    
+}
+
+input[type="submit"]:hover {
+    text-decoration: underline;
+}
+
+.form-title-checkbox label {
+    width: 85%;
+}
+
+@media screen and (max-width: 1070px){
+    .signup-page-form {
+        width: 80%;
+        padding-left: 60px;    
+    }
+    input, select, label {
+        font-size: 20px;
+    }    
+}
+
+@media screen and (max-width: 660px){
+    .signup-page-form {
+        width: 100%;}
+}
+
+
+@media screen and (max-width: 660px){
+    input, select, label {
+        font-size: 12px;
+    }
+    
+    input[type="submit"] {        
+        font-size: 20px;
+        font-weight: bold;            
+    }
+}
+

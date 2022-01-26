@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOSTINGAS | Užsakyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+
+    <header class="header colorThree-background">
+    </header>
+
+    <nav class="mobile-nav">
+    </nav>
+
+    <main class="signup-page">
+
+        <div class="signup-page-title colorOne">
+            <h1 class="signup-page-title-h1" translation-orderPage-title>PUIKU! PRADĖKIME REGISTRACIJĄ</h1>
+        </div>
+
+        <div class="signup-page-div">
+
+            <form action="index.html" class="signup-page-form">
+
+                <div class="form-title">
+                    <label for="title" class="colorOne" translation-orderPage-plan>Planas</label>
+                    <select name="title" id="title" class="block colorTwo-background colorOne">
+                        <option value="solo">SOLO</option>
+                        <option value="basic">BASIC</option>
+                        <option value="premium">PREMIUM</option>
+                    </select>
+                </div>
+
+                <div class="form-title-first-name">
+                    <label for="first-name" class="colorOne" translation-orderPage-name>Vardas</label>
+                    <input type="text" id="first-name" name="first-name" class="colorTwo-background colorOne" required>
+                </div>
+
+                <div class="form-title-last-name">
+                    <label for="last-name" class="colorOne" translation-orderPage-lastName>Pavardė</label>
+                    <input type="text" id="last-name" name="last-name" class="colorTwo-background colorOne" required>
+                </div>
+
+                <div class="form-title-email">
+                    <label for="email" class="colorOne" translation-orderPage-email>El. paštas</label>
+                    <input type="email" name="email" id="email" class="colorTwo-background colorOne" required>
+                </div>
+
+                <div class="form-title-password">
+                    <label for="password" class="colorOne" translation-orderPage-password>Slaptažodis</label>
+                    <input type="password" name="password" id="password" class="colorTwo-background colorOne" required>
+                </div>
+
+                <div class="form-title-checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox" class="right colorOne" translation-orderPage-terms>Sutinku su sąlygomis ir
+                        taisyklėmis</label>
+                </div>
+
+                <div class="form-title-sumbit">
+                    <input type="submit" value="Pateikti" class="block colorOne colorTwo-background"
+                        translation-orderPage-submit>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="footer colorOne-background">
+    </footer>
+
+    <script src="js/menuFooter.js"></script>
+    <script>
+        //Header sukurimas
+        getHeader(document.querySelector(".header"));
+
+        //Mobile menu sukurimas
+        getMobileMenu(document.querySelector(".mobile-nav"));
+
+        //Footer suskurimas
+        getFooter(document.querySelector(".footer"));
+    </script>
+
+    <script src="js/shared.js"></script>
+    <script src="js/translations.js"></script>
+
+    <script>
+        //Vertimas
+        doTranslationsMenu(lang);
+        doTranslationsFooter(lang);
+        doTranslationsOrderPage(lang);
+
+        document
+            .querySelector("#languageChanger")
+            .addEventListener("change", function () {
+                doTranslationsMenu(this.value);
+                doTranslationsFooter(this.value);
+                doTranslationsOrderPage(this.value);
+                localStorage.setItem("language", this.value)
+            })
+    </script>
+
+</body>
+
+</html>

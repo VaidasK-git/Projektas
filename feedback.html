@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOSTINGAS | Klientų atsiliepimai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+
+<body>
+
+    <header class="header colorThree-background">
+    </header>
+
+    <nav class="mobile-nav">
+    </nav>
+
+    <main class="feedback-page">
+
+        <div class="slideshow-container">
+
+            <div class=feedbaks>
+            </div>
+
+            <div>
+                <a class="prev colorOne" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next colorOne" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+        </div>
+
+        <div style="text-align:center" class="dots">
+        </div>
+
+    </main>
+
+    <footer class="footer colorOne-background">
+    </footer>
+
+    <script src="js/menuFooter.js"></script>
+    <script>
+        //Header sukurimas
+        getHeader(document.querySelector(".header"));
+
+        //Mobile menu sukurimas
+        getMobileMenu(document.querySelector(".mobile-nav"));
+
+        //Footer suskurimas
+        getFooter(document.querySelector(".footer"));
+    </script>
+
+    <script src="js/data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/shared.js"></script>
+
+    <script>
+        //Karuseles funkcijos
+        var slideIndex = 1;
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Atsiliepimu ikelimas
+        let feedbacks = loadFeedBack(lang);
+
+        //Tasku kurimas        
+        for (let index = 0; index < feedbacks.length; index++) {
+            const dotIndex = index + 1;
+            let template = '<span class="dot colorOne-background" onclick="currentSlide({{index}})"></span>';
+            template = template.replace('{{index}}', dotIndex);
+            document.querySelector(".dots").innerHTML += template;
+        }
+
+        //Karusele
+        showSlides(slideIndex);
+
+        //Vertimas        
+        doTranslationsMenu(lang);
+        doTranslationsFooter(lang);
+
+        document
+            .querySelector("#languageChanger")
+            .addEventListener("change", function () {
+                doTranslationsMenu(this.value);
+                doTranslationsFooter(this.value);
+
+                loadFeedBack(this.value);
+
+                localStorage.setItem("language", this.value)
+
+                showSlides(slideIndex);
+            })
+
+    </script>
+</body>
+
+</html>

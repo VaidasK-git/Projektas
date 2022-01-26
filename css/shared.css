@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', serif;
+}
+
+body {
+    height: calc(100vh - 33vh);
+}
+
+/* Header css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+    height: 250px;
+    z-index: 2;    
+}
+
+.header-title {
+    width: 100%;    
+    height: 75%;    
+}
+
+.header-title-h1 {
+    padding-top: 120px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-size: 40px;    
+}
+
+
+/* Nav css */
+.header-nav {
+    width: 100%;    
+    height: 25%;    
+    display: flex;
+    flex-wrap: wrap;      
+}
+
+.header-nav-left {
+    height: 100%;
+    width: 25%;    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    
+}
+
+.header-nav-left-dir {  
+     padding-left: 60px;          
+}
+
+.header-nav-left-dir a{    
+    font-size: 24px;
+    font-weight: bold;    
+    text-decoration: none;
+    text-transform: uppercase;    
+}
+
+.header-nav-right {    
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;       
+}
+
+.header-nav-right-div {
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;      
+}
+
+.header-nav-right-div-ul{
+    margin: 0;    
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;      
+}
+
+.header-nav-right-div-ul-li {
+    padding-right: 20px;
+}
+
+.header-nav-right-div-ul-li a,
+.mobile-nav-ul-li a {       
+    text-decoration: none;   
+    font-size: 24px;
+    font-weight: bold;  
+}
+
+.header-nav-right-div-ul-li a:hover{        
+    text-decoration: underline;    
+}
+
+.marked {
+    padding: 5px 10px;    
+    border-radius: 5px;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger div {
+    display: none;
+    width: 35px;
+    height: 5px;    
+    margin: 6px 0;   
+}
+
+.language {
+    padding: 0;
+    margin-left: 20px;
+    width: 50px;    
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+}
+
+/* Mobile nav */
+.mobile-nav {	
+    display: none;
+	position: fixed;
+	z-index: 200;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.4);
+	width: 100%;
+    height: 100%;
+}
+
+.mobile-nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;    
+	list-style: none;	
+}
+
+.mobile-nav-ul-li {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.mobile-nav-ul-li a:hover{        
+    text-decoration: underline;    
+}
+
+/* Footer css */
+.footer {	
+	width: 100%;
+	height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-nav address {
+    all: initial;
+    margin-left: 60px;
+    width: 100%;
+	color: #fff;
+    font-size: 24px;
+    font-weight: bold;    
+    text-decoration: none;
+    font-family: inherit;
+    
+}
+
+@media screen and (max-width: 780px) {
+    .header-nav-right-div-ul{
+        display: none;
+    }
+
+    .hamburger div {
+        display: block;
+        
+    }
+
+    .header-title-h1 {
+        padding-top: 80px;
+        
+    }
+}
+
+@media screen and (max-width:425px) {
+    .plans-div-plan-ul-li i {
+       display: none;
+    }    
+}
+
+@media screen and (max-width: 375px) {
+    .header-title-h1 {
+        padding-top: 40px;
+        font-size: 36px;        
+    }
+
+    .footer-nav address {        
+        font-size: 14px;       
+    }
+
+    .header-nav-left-dir a{    
+        display: none;  
+    }    
+}
+
+        
+/* Spalvos */
+.colorOne {
+    color: #00458B;
+}
+
+.colorOne-background {
+    background-color: #00458B;
+}
+
+.colorTwo {
+    color: #3FD2C7;
+}
+
+.colorTwo-background {
+    background-color: #3FD2C7;
+}
+
+.colorThree {
+    color: #99DDFF;
+}
+
+.colorThree-background {
+    background-color: #99DDFF;
+}
+
+.colorFour {
+    color: #fff;
+}
+
+.colorFour-background {
+    background-color: #fff;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+

@@ -1,0 +1,157 @@
+.feedback-page {
+    margin-top: 250px;
+    min-height: 100%;
+    padding-bottom: 20px;      
+}
+
+/* Karusele */
+.slideshow-container {  
+  padding-top: 40px;  
+  max-width: 1000px;    
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;  
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #00458B;
+  color: #fff;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;  
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3FD2C7;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* klientu atslipiepimai */
+.feedback {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 60% 40%;  
+  margin-bottom: 20px;
+  margin-left: 42px;
+  margin-right: 42px;  
+}
+
+.feedback-image-container {		
+  height: 90%;	
+	overflow: hidden;
+}
+
+.feedback-image {
+	width: 100%;	
+}
+
+.feedback-info { 
+  padding-top: 200px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.feedback-name {
+	margin-bottom: 10px;	
+	font-size: 32px;
+}
+
+.feedback-position {  	
+	font-size: 20px;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 780px) {
+  .slideshow-container {    
+    max-width: 550px;     
+  }
+
+  .feedback {
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    
+  }
+
+  .feedback-image-container {
+    height: 70%;	
+    overflow: hidden;
+  }
+  
+  .feedback-info {
+    padding-top: 30px;
+    height: 30%;	
+    overflow: hidden;
+  } 
+
+  .feedback-name {
+    margin-bottom: 5px;
+  }  
+}
+
+@media screen and (max-width: 585px) {
+  .feedback-image-container { 
+    display: none;   
+  }
+
+  .feedback {
+    height: 300px;    
+  }
+
+  .feedback-info { 
+    padding-top: 50px;
+    height: 100%;    
+  }
+}
+
+
+
+
+
+
+
